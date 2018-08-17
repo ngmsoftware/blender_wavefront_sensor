@@ -1,0 +1,20 @@
+- Set python to automatically UNbuffer output:
+-- put PYTHONUNBUFFERED=on on your .bash_profile
+
+- force OSL to UNoptimize shadders
+-- OSL_OPTIONS="optimize=0" on .bash_profile
+
+- gerp now is the responsable for buffering
+-- use grep --line-buffered 
+
+- instead of redirecting to a file like > output.txt, use another pipe to a python script that handles the upcoming text
+-- blender | grep --line-buffered "something" | pipeServer.py 
+
+- algorithm
+
+1 - in blender, setup a timer
+2 - each iterations:
+2.1 - echo a "command" to the console to prepare a new file
+2.2 - do a render so the "detector" generates the hit data in the file
+2.3 - read the file and compute stuff
+ 

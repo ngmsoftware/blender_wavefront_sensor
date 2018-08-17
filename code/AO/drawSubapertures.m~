@@ -1,0 +1,19 @@
+function drawSubapertures(S, Ns)
+
+    sx = S(1:end/2,1);
+    sy = S(end/2+1:end,1);
+    
+    Ix = reshape(sx, Ns, Ns);
+    Iy = reshape(sy, Ns, Ns);
+
+    quiver(Ix, Iy);
+    
+    axis('off');
+    
+    for i=1:Ns
+        for j=1:Ns
+            
+        end
+    end
+    
+end

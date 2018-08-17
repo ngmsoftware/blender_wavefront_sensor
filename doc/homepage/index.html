@@ -1,0 +1,353 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
+<title>Blender Wavefront sensor</title>
+<link rel="stylesheet" type="text/css" href="styles.css"/>
+
+<script src="jquery-2.1.1/jquery-2.1.1.min.js"></script>
+<script src="jquery-2.1.1/jquery-ui.min.js"></script>
+<script src="jquery-2.1.1/jquery.layout_and_plugins.min.js"></script>
+
+
+<script type="text/javascript">
+    
+function init() {
+
+    $el = $("#mainContent");
+    elHeight = $el.outerHeight();
+    elWidth = $el.outerWidth();
+
+    $(window).resize(function() {
+      doResize();
+    });
+
+    doResize();
+
+    setupLis();
+}
+
+
+function hideAllBoards() {
+    $('[id^="board"]').each(function(a,b){
+      $('#'+b.id).hide()
+    })
+}
+
+
+function setupLis() {
+
+    $("#logo").mouseover(function() {
+        hideAllBoards();
+        $("#board0_1").show();
+    });
+
+
+    $("#li1_1").mouseover(function() {
+        hideAllBoards();
+        $("#board1_1").show();
+    });
+    $("#li1_2").mouseover(function() {
+        hideAllBoards();
+        $("#board1_2").show();
+    });
+    $("#li1_3").mouseover(function() {
+        hideAllBoards();
+        $("#board1_3").show();
+    });
+    $("#li1_4").mouseover(function() {
+        hideAllBoards();
+        $("#board1_4").show();
+    });
+
+
+    $("#li2_1").mouseover(function() {
+        hideAllBoards();
+        $("#board2_1").show();
+    });
+    $("#li2_2").mouseover(function() {
+        hideAllBoards();
+        $("#board2_2").show();
+    });
+    $("#li2_3").mouseover(function() {
+        hideAllBoards();
+        $("#board2_3").show();
+    });
+    $("#li2_4").mouseover(function() {
+        hideAllBoards();
+        $("#board2_4").show();
+    });
+    $("#li2_5").mouseover(function() {
+        hideAllBoards();
+        $("#board2_5").show();
+    });
+
+
+    $("#li3_1").mouseover(function() {
+        hideAllBoards();
+        $("#board3_1").show();
+    });
+    $("#li3_2").mouseover(function() {
+        hideAllBoards();
+        $("#board3_2").show();
+    });
+    $("#li3_3").mouseover(function() {
+        hideAllBoards();
+        $("#board3_3").show();
+    });
+
+
+    $("#li4_1").mouseover(function() {
+        hideAllBoards();
+        $("#board4_1").show();
+    });
+    $("#li4_2").mouseover(function() {
+        hideAllBoards();
+        $("#board4_2").show();
+    });
+    $("#li4_3").mouseover(function() {
+        hideAllBoards();
+        $("#board4_3").show();
+    });
+
+
+    $("#li5_1").mouseover(function() {
+        hideAllBoards();
+        $("#board5_1").show();
+    });
+    $("#li5_2").mouseover(function() {
+        hideAllBoards();
+        $("#board5_2").show();
+    });
+    $("#li5_3").mouseover(function() {
+        hideAllBoards();
+        $("#board5_3").show();
+    });
+
+
+    hideAllBoards();
+    $('#content').show();
+    $('#wait').hide();
+    
+    $("#board0_1").show();
+}
+
+
+
+
+
+function doResize() {
+  
+  var scale, origin;
+  windowWidth = $(window).width();
+  windowHeight = $(window).height();
+
+  scale = Math.min(
+    windowWidth / elWidth,    
+    windowHeight / elHeight
+  );
+
+  centerX =  (windowWidth/2 - elWidth/2) + "px";
+  centerY =  (windowHeight/2 - elHeight/2) + "px";
+
+  $el.css({
+    transform: "translate("+centerX+","+centerY+") scale("+scale+")"
+  });
+
+}
+
+
+
+
+
+
+
+
+</script>
+
+
+
+</head>
+<body onload="init()">
+
+
+<div id="mainContent" class="scaleableDiv">
+    <table width="100%">
+      <tr>
+        <td width="70%">
+          <h1><img id='logo' src="blender_logo.png" width="20%""> Wavefront Sensor<small>Simulation of technical optics using <br/> <font color="7070ff">Open Shading Language</font></small></h1>
+        </td>
+        <td>
+          <span class="contact">
+          allan martins - allan666@gmail.com<br/>
+          demo: <a href="https://www.youtube.com/watch?v=HRdmDOKqeHg">video</a><br/>
+          Code and files: <a href="https://github.com/ngmsoftware/blender_wavefront_sensor">GitHUB</a>
+        </span>
+        </td>
+      </tr>
+    </table>
+    
+    <br/>
+
+    <div id="wait">
+      <img src="loading.gif">
+    </div>
+
+    <div id="content" style="margin: 10px; display: none">
+
+    <table width="100%">
+        <tr>
+            <td width="40%">
+                <table>
+                    <tr>
+                        <td valign="top">
+                                <img src="blender.ico" class="itemButton">
+                        </td>
+                        <td>
+                                <span class="itemTitle"> Blender </span>
+                                <div class="item">
+                                    <ul>
+                                      <li id="li1_1">Simple blender file   <font color='blue'>[view]</font></li>
+                                      <li id="li1_2">Simple geometries for devices   <font color='blue'>[view]</font></li>
+                                      <li id="li1_3">Panel interface   <font color='blue'>[view]</font></li>
+                                      <li id="li1_4">Especial material for the detector   <font color='blue'>[view]</font></li>
+                                    </ul>
+
+                                </div>
+
+                        </td>
+                    </tr>  
+
+                  
+
+                    <tr>
+                        <td valign="top">
+                                <img src="blender.ico" class="itemButton">
+                        </td>
+                        <td>
+                                <span class="itemTitle"> Python </span>
+                                <div class="item">
+
+                                    <ul>
+                                      <li id="li2_1">Pipe interface with the detector material   <font color='blue'>[view]</font></li>
+                                      <li id="li2_2">Command / Interpreter emulation   <font color='blue'>[view]</font></li>
+                                      <li id="li2_3">Main computation of wavefront vectors    <font color='blue'>[view]</font></li>
+                                      <li id="li2_4">Wavefront calibration    <font color='blue'>[view]</font></li>
+                                      <li id="li2_5">Simple plot based interface   <font color='blue'>[view]</font></li>
+                                    </ul>
+
+                                </div>
+
+                        </td>
+                    </tr>        
+
+
+
+
+
+
+                    <tr>
+                        <td valign="top">
+                                <img src="blender.ico" class="itemButton">
+                        </td>
+                        <td>
+                                <span class="itemTitle"> Matlab </span>
+                                <div class="item">
+
+                                    <ul>
+                                      <li id="li3_1">Modeling of deformable mirror eigenmodes   <font color='blue'>[view]</font></li>
+                                      <li id="li3_2">"inversion/synthesis" of command matrix for deformable mirror   <font color='blue'>[view]</font></li>
+                                      <li id="li3_3">Simple plot interface   <font color='blue'>[view]</font></li>
+                                    </ul>
+
+                                </div>
+
+                        </td>
+                    </tr>     
+
+
+                    <tr>
+                        <td valign="top">
+                                <img src="blender.ico" class="itemButton">
+                        </td>
+                        <td>
+                                <span class="itemTitle"> OSL / C </span>
+                                <div class="item">
+
+                                    <ul>
+                                      <li id="li4_1">Detector texture   <font color='blue'>[view]</font></li>
+                                      <li id="li4_2">Simple interfaces the hit-position vector   <font color='blue'>[view]</font></li>
+                                      <li id="li4_3">Debug as tool   <font color='blue'>[view]</font></li>
+                                    </ul>
+
+                                </div>
+
+                        </td>
+                    </tr>     
+
+
+
+                    <tr>
+                        <td valign="top">
+                                <img src="blender.ico" class="itemButton">
+                        </td>
+                        <td>
+                                <span class="itemTitle"> the System </span>
+                                <div class="item">
+
+                                    <ul>
+                                      <li id="li5_1"> Blender    <font color='blue'>[view]</font></li>
+                                      <li id="li5_2"> Python    <font color='blue'>[view]</font></li>
+                                      <li id="li5_3"> Matlab    <font color='blue'>[view]</font></li>
+                                    </ul>
+
+                                </div>
+
+                        </td>
+                    </tr>   
+
+                </table>
+            </td>
+            <td align="center">
+
+
+
+                <img id="board0_1" src="output.gif" style="background: transparent url('loading.gif') center no-repeat; display: none;">
+
+                <img id="board1_1" src="blender.png" style="background: transparent url('loading.gif') center no-repeat; display: none;">
+                <img id="board1_2" src="devices.png" style="background: transparent url('loading.gif') center no-repeat; display: none;">
+                <img id="board1_3" src="panel.png" style="background: transparent url('loading.gif') center no-repeat; display: none;">
+                <img id="board1_4" src="materials.png" style="background: transparent url('loading.gif') center no-repeat; display: none;">
+
+                <img id="board2_1" src="interface.png" style="background: transparent url('loading.gif') center no-repeat; display: none;">
+                <img id="board2_2" src="server.png" style="background: transparent url('loading.gif') center no-repeat; display: none;">
+                <img id="board2_3" src="process.png" style="background: transparent url('loading.gif') center no-repeat; display: none;">
+                <img id="board2_4" src="calibration.png" style="background: transparent url('loading.gif') center no-repeat; display: none;">
+                <img id="board2_5" src="plot.png" style="background: transparent url('loading.gif') center no-repeat; display: none;">
+
+                <img id="board3_1" src="DMeigenmodes.png" style="background: transparent url('loading.gif') center no-repeat; display: none;">
+                <img id="board3_2" src="inversion.png" style="background: transparent url('loading.gif') center no-repeat; display: none;">
+                <img id="board3_3" src="plotsMatlab.png" style="background: transparent url('loading.gif') center no-repeat; display: none;">
+
+                <img id="board4_1" src="oslDetector.png" style="background: transparent url('loading.gif') center no-repeat; display: none;">
+                <img id="board4_2" src="detectorMaterial.png" style="background: transparent url('loading.gif') center no-repeat; display: none;">
+                <img id="board4_3" src="debug.png" style="background: transparent url('loading.gif') center no-repeat; display: none;">
+
+                <img id="board5_1" src="systemBlender.png" style="background: transparent url('loading.gif') center no-repeat; display: none;">
+                <img id="board5_2" src="systemPython.png" style="background: transparent url('loading.gif') center no-repeat; display: none;">
+                <img id="board5_3" src="systemMatlab.png" style="background: transparent url('loading.gif') center no-repeat; display: none;">
+
+            </td>
+        </tr>
+    </table>
+
+
+    </div>
+</div>
+
+
+
+
+
+</body>
+</html>
