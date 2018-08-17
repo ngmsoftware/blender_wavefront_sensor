@@ -2,6 +2,8 @@
 
 Small project aimed to demonstrate the principles of adaptive optics using blender and Matlab. In this project, we explore a new use for Blender as a tool to learn advanced concepts in optics. It is about using Blender to simulate a complete adaptive optics system that corrects for distortions in a non-uniform medium for light propagation like the atmosphere. The system is composed by a Blender file that contains an array of “detectors”, a light path and a deformable mirror between the light source and the detectors. The user can put any transparent object in the light path and the system will compute the wavefront deformation caused by this object in the detectors. The user can also ask for a set of “commands” to be applied to the deformable mirror. Those commands consists of micro deformations in the mirror surface. A Matlab script them compute such deformations and send back to the Blender file that moves the “actuators” of the mirror, compensating for the deformation of the object and thus correcting the distortion caused by the light passing through the object.
 
+Demo vídeo: https://www.youtube.com/watch?v=HRdmDOKqeHg
+
 ## Software
 
 - blender
