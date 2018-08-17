@@ -25,18 +25,26 @@ Small project aimed to demonstrate the principles of adaptive optics using blend
 To compute wavefronts:
 
 1 - Run blender using the shell script run.sh. This script will run blender with the pipe server in the middle using the grep to capture and filter the outputs.
+
 2 - In blender, open the main blender file.
+
 3 - Run the panel.py script
+
 4 - Without any object in the light path, check "calibrate" and click compute. This will calibrate the array of detectors
+
 5 - Place an object in the light path and click compute (uncheck the calibrate box)
 
 
 To use the deformable mirror (you can skip the steps 1 to 3 if you executed it once)
 
 1 - To generate the DM command matrix, click "Command Matrix". This will pich each actuator in the mirror and generate, for each one, a .m file with the deformations. It generates in the /tmp folder.
+
 2 - Copy the generated .m files to code/AO/blender
+
 3 - configure read_DM.m to compute the DM commands from "current" 
+
 4 - run read_DM.m 
+
 5 - in blender, click "Load mirror commands"
 
 
